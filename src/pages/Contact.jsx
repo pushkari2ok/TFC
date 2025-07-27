@@ -91,7 +91,9 @@ const Contact = () => {
                 </div>
                 <div className="d-flex flex-column flex-md-row gap-2">
                   <button type="submit" className="btn btn-primary w-100">Submit</button>
-                  <a href="tel:+919175339235" className="btn btn-outline-primary w-100">Call Now</a>
+<a href="tel:+919175339235" className="btn btn-outline-primary w-100">
+  Call Now
+</a>
                 </div>
               </form>
             </div>

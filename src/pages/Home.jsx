@@ -33,6 +33,25 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 function Home() {
 
+    const [email, setEmail] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!email.trim()) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Perform actual subscription logic here (API call, etc.)
+        console.log("Subscribed with:", email);
+
+        // Reset email field
+        setEmail("");
+
+        alert("Thank you for subscribing!");
+    };
+
     const [visible, setVisible] = useState(false);
     useEffect(() => {
         const toggleVisibility = () => {
@@ -50,42 +69,42 @@ function Home() {
 
     const dishes = {
         signature: [
-            { name: "Butter Chicken", img: "src/assets/img/Exploreitems/unnamed.jpg", badge: "Best Seller", price: "₹250" },
-            { name: "Paneer Tikka", img: "src/assets/img/Exploreitems/paneer tikka.jpg", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
-            { name: "Paneer Tikka", img: "path/to/image2.png", badge: "Veg", price: "₹180" },
+            { name: "Butter Chicken", img: "src/assets/img/Exploreitems/unnamed.jpg", badge: "Best Seller" },
+            { name: "Paneer Tikka", img: "src/assets/img/Exploreitems/paneer tikka.jpg", badge: "Veg" },
+            // { name: "Paneer Tikka", img: "src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-23 at 5.00.09 PM.jpeg", badge: "Veg" },
+            { name: "Paneer Tikka", img: "src/assets/img/icons/claydish2.jpg", badge: "Veg" },
+            { name: "Paneer Tikka", img: "src/assets/img/icons/thaalis1.jpg", badge: "Veg" },
+            { name: "Paneer Tikka", img: "src/assets/img/icons/thalis2.jpg", badge: "Veg" },
+            { name: "Paneer Tikka", img: "src/assets/img/icons/thalis4.jpg", badge: "Veg" },
+            { name: "Paneer Tikka", img: "src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-23 at 5.00.09 PM.jpeg", badge: "Veg" },
 
             // more...
         ],
         maharashtrian: [
-            { name: "Misal Pav", img: "src/assets/img/Exploreitems/misal.png", badge: "Hot", price: "₹80" },
-            { name: "Puran Poli", img: "src/assets/img/Exploreitems/puranpoli.png", badge: "Sweet", price: "₹60" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
-            { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack", price: "₹20" },
+            { name: "Misal Pav", img: "src/assets/img/icons/MahThalis.jpg", badge: "Hot" },
+            { name: "Puran Poli", img: "src/assets/img/icons/puranpolithali.jpg", badge: "Sweet" },
+            { name: "Vada Pav", img: "src/assets/img/icons/mahthalis2.jpg", badge: "Snack" },
+            { name: "Vada Pav", img: "src/assets/img/icons/Mahthalis3.jpg", badge: "Snack" },
+            { name: "Vada Pav", img: "src/assets/img/icons/Mahthalis4.jpg", badge: "Snack" },
+            { name: "Vada Pav", img: "src/assets/img/icons/mahthalis5.jpg", badge: "Snack" },
+            // { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack" },
+            // { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack" },
+            // { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack" },
+            // { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack" },
+            // { name: "Vada Pav", img: "src/assets/img/Exploreitems/vadapav.png", badge: "Snack" },
 
             // more...
         ],
         punjabi: [
-            { name: "Chole Bhature", img: "path/to/chole.png", badge: "Spicy", price: "₹120" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
-            { name: "Rajma Chawal", img: "path/to/rajma.png", badge: "Classic", price: "₹100" },
+            { name: "Chole Bhature", img: "src/assets/img/icons/Punjabthalis1.jpg", badge: "Spicy" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis2.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis3.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis4.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis5.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis6.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis7.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/punjabthalis8.jpg", badge: "Classic" },
+            { name: "Rajma Chawal", img: "src/assets/img/icons/rajmapunjab.jpg", badge: "Classic", price: "₹100" },
 
             // more...
         ]
@@ -265,37 +284,64 @@ function Home() {
                                         {/* Mobile Nav Items (Same as yours) */}
                                         <ul className="list-unstyled text-uppercase mb-4">
                                             <li className="mb-3">
-                                                <a href="#reviews" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#reviews"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Reviews
                                                 </a>
                                             </li>
                                             <li className="mb-3">
-                                                <a href="#our-story" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#our-story"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Our Story
                                                 </a>
                                             </li>
                                             <li className="mb-3">
-                                                <a href="#ambience" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#ambience"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Ambience
                                                 </a>
+
                                             </li>
                                             <li className="mb-3">
-                                                <a href="#specialities" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#specialities"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Specialities
                                                 </a>
                                             </li>
                                             <li className="mb-3">
-                                                <a href="#about-us" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#about-us"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}>
                                                     About Us
                                                 </a>
                                             </li>
                                             <li className="mb-3">
-                                                <a href="#dishes" className="text-dark text-decoration-none">
+                                                <a
+                                                    href="#dishes"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Dishes
                                                 </a>
                                             </li>
                                             <li className="mb-4">
-                                                <a href="#franchise" className="text-dark text-decoration-none">
+                                                <a href="#franchise"
+                                                    className="text-dark text-decoration-none"
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                >
                                                     Franchise
                                                 </a>
                                             </li>
@@ -328,10 +374,20 @@ function Home() {
                 {/* burger-promo-area */}
                 <section
                     className="delivery-area burger-promo-area pb-5 position-relative overflow-hidden m-0 p-0"
-                    style={{ marginTop: "0px", paddingTop: "330px" }}
+                    style={{
+                        marginTop: "0px",
+                        paddingTop: "330px",
+                        backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 5.29.37 PM.jpeg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        height: "100vh",
+                        zIndex: 0,
+                    }}
                 >
                     {/* 🍃 Decorative Floating Leaves */}
                     <div
+                        className="item-animateTwo"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -339,15 +395,15 @@ function Home() {
                             width: "100%",
                             height: "100%",
                             pointerEvents: "none",
-                            zIndex: 0,
+                            zIndex: 2,
                         }}
                     >
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
+                            src="src/assets/img/icons/1.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "50vh",
+                                width: "10vh",
                                 height: "auto",
                                 top: "15%",
                                 left: "5%",
@@ -356,11 +412,11 @@ function Home() {
                             }}
                         />
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                            src="src/assets/img/icons/14.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "60vh",
+                                width: "40vh",
                                 height: "auto",
                                 top: "35%",
                                 left: "80%",
@@ -370,11 +426,11 @@ function Home() {
                             }}
                         />
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                            src="src/assets/img/icons/24.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "30vh",
+                                width: "20vh",
                                 height: "auto",
                                 top: "60%",
                                 left: "20%",
@@ -385,78 +441,32 @@ function Home() {
                         />
                     </div>
 
-                    <div className="container">
-                        <div className="row flex-row-reverse align-items-center">
-                            {/* Image Column */}
-                            <div className="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-left">
-                                <div className="delivery-left text-center position-relative">
-                                    <div className="burger-shapes position-relative">
-                                        <img
-                                            src="src/assets/img/Homeimg/hero.jpeg"
-                                            className="img-fluid responsive-burger-img"
-                                            alt="burger"
-                                            style={{
-                                                maxWidth: "100%",
-                                                height: "100%",
-                                                marginTop: "-130px",
-                                                marginLeft: "0px",
-                                            }}
-                                        />
-
-                                        {/* 🔵 Floating Decorative Image 1 */}
-                                        <span
-                                            className="position-absolute floating d-none d-md-block"
-                                            style={{
-                                                top: "10%",
-                                                left: "-40px",
-                                                zIndex: 1,
-                                            }}
-                                            data-aos="zoom-in"
-                                        >
-                                            <img
-                                                src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
-                                                alt="decor shape 1"
-                                                style={{ width: "50vh", height: "80px" }}
-                                            />
-                                        </span>
-
-                                        {/* 🔴 Rotating Decorative Image 2 */}
-                                        <span
-                                            className="position-absolute rotating d-none d-md-block"
-                                            style={{
-                                                bottom: "5%",
-                                                right: "-40px",
-                                                zIndex: 1,
-                                            }}
-                                            data-aos="zoom-in-up"
-                                        >
-                                            <img
-                                                src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
-                                                alt="decor shape 2"
-                                                style={{ width: "100px", height: "100px" }}
-                                            />
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Text Content Column */}
-                            <div className="col-lg-6 col-md-12" data-aos="fade-right">
-                                <div className="delivery-right text-center text-lg-start">
+                    {/* 📦 Content Container */}
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div
+                                className="col-lg-6 col-md-12 align-self-center"
+                                data-aos="fade-right"
+                                style={{
+                                    marginTop: "280px",
+                                    marginLeft: "60px",
+                                }}
+                            >
+                                <div className="delivery-right text-center text-lg-start px-3 px-sm-5">
                                     <div className="common-title-area pb-4">
-                                        <h3 className="text-uppercase text-danger">Best in Town</h3>
-                                        <h1 className="fw-bold display-5">
-                                            Slow-Cooked Perfection
+                                        <h3 className="text-uppercase text-danger fs-5 fs-md-6">Best in Town</h3>
+                                        <h1 className="fw-bold display-6 text-white">
+                                            Slow-Cooked Perfection{" "}
                                             <span className="text-primary"> ./Family </span>Recipes, Shared
                                         </h1>
-                                        <h5 className="my-4 text-muted">bacon - potatoes - bbq sauce</h5>
-                                        <div className="order-box d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap">
-                                            <a href="shopping-cart.html" className="btn btn-danger me-3 mb-2">
+                                        <h5 className="my-3 text-light small">bacon - potatoes - bbq sauce</h5>
+                                        <div className="order-box d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap gap-2">
+                                            <a href="shopping-cart.html" className="btn btn-danger me-2">
                                                 Order Now
                                             </a>
-                                            <h5 className="mb-0">
+                                            <h6 className="mb-0 text-white">
                                                 Price: <span className="text-success fw-bold">$10.50</span>
-                                            </h5>
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -464,6 +474,8 @@ function Home() {
                         </div>
                     </div>
                 </section>
+
+
 
 
 
@@ -481,7 +493,7 @@ function Home() {
                         <div className="del-shapes">
                             {/* Left Floating Shape */}
                             <span
-                                className="ds-1 floating d-none d-md-block"
+                                className="ds-1 item-animateTwo floating d-none d-md-block"
                                 style={{
                                     position: "absolute",
                                     top: "10%",
@@ -491,7 +503,7 @@ function Home() {
                                 data-aos="fade-down"
                             >
                                 <img
-                                    src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
+                                    src="src/assets/img/icons/9.png"
                                     alt="Floating Shape Left"
                                     className="img-fluid"
                                     style={{ width: "150px", height: "100px", marginLeft: "-40px" }}
@@ -500,7 +512,7 @@ function Home() {
 
                             {/* Right Rotating Shape */}
                             <span
-                                className="ds-2 rotating d-none d-md-block"
+                                className="ds-2 rotating item-animateTwo d-none d-md-block"
                                 style={{
                                     position: "absolute",
                                     bottom: "5%",
@@ -510,10 +522,10 @@ function Home() {
                                 data-aos="fade-up"
                             >
                                 <img
-                                    src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                                    src="src/assets/img/icons/20.png"
                                     alt="Floating Shape Right"
-                                    className="img-fluid"
-                                    style={{ width: "100px", height: "100px", marginRight: "-40px" }}
+                                    className="img-fluid "
+                                    style={{ width: "200px", height: "100px", marginRight: "-40px" }}
                                 />
                             </span>
                         </div>
@@ -525,15 +537,15 @@ function Home() {
                                     <h3>Authenticity Over Trends</h3>
                                     <p>Sale off 50% only this week</p>
                                     <a href="shopping-cart.html" className="btn btn-primary">Order Now</a>
-                                    <img src="assets/images/shapes/bbr.png" alt="" className="img-fluid mt-3" />
+                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (1).jpeg" alt="" className="img-fluid mt-3" />
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6" data-aos="zoom-in">
+                            <div className="col-lg-3 col-md-6" data-aos="zoom-in" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM.jpeg" }}>
                                 <div className="gallery-img-3 text-center">
                                     <h5>Home<br />-Made<br />Masalas</h5>
-                                    <img src="assets/images/gallery/grid1.png" alt="" className="img-fluid mb-2" />
-                                    <img src="assets/images/shapes/41.png" alt="" className="img-fluid s1" />
+                                    {/* <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (2).jpeg" alt="" className="img-fluid mb-2" />
+                                    <img src="assets/images/shapes/41.png" alt="" className="img-fluid s1" /> */}
                                     <span className="gprice-2">$15</span><br />
                                     <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
                                 </div>
@@ -541,7 +553,7 @@ function Home() {
 
                             <div className="col-lg-3 col-md-6" data-aos="zoom-in-up">
                                 <div className="gallery-img-2 text-center">
-                                    <img src="assets/images/gallery/grid2.png" alt="" className="img-fluid mb-2" />
+                                    <img src="src/assets/img/WhatsAppimg/cooking2.jpg" alt="" className="img-fluid mb-2" />
                                     <span className="gprice-1">$15</span>
                                     <div className="gimg-content">
                                         <h5>Home-Made<br />Masalas</h5>
@@ -556,10 +568,10 @@ function Home() {
                             <div className="col-lg-3 col-md-6" data-aos="fade-up-right">
                                 <div className="gallery-img-3 text-center">
                                     <h5>Hearty <br />Vegetarian<br />Staples</h5>
-                                    <img src="assets/images/gallery/grid4.png" alt="" className="img-fluid mb-2" />
-                                    <img src="assets/images/shapes/41.png" alt="" className="img-fluid s1" />
+                                    <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid mb-2" />
+                                    {/* <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid s1" /> */}
                                     <span className="gprice-2">$15</span><br />
-                                    <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
+                                    {/* <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a> */}
                                 </div>
                             </div>
 
@@ -581,7 +593,7 @@ function Home() {
                                     <p>Sale off 50% only this week</p>
                                     <a href="shopping-cart.html" className="btn btn-primary">Order Now</a><br />
                                     <img src="assets/images/shapes/bbs.png" alt="" className="img-fluid mt-3" />
-                                    <img src="assets/images/icons/pbadge.png" alt="" className="img-fluid pbadge mt-2" />
+                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid pbadge mt-2" />
                                 </div>
                             </div>
                         </div>
@@ -596,9 +608,9 @@ function Home() {
 
 
                 {/*Who Are We */}
-                <section className="softdrink-section padding-bottom-80 position-relativecm-0 p-0 overflow-hidden" id="about-us">
+                <section className="softdrink-section padding-bottom-80  position-relativecm-0 p-0 overflow-hidden w-100" id="about-us">
                     {/* 🍃 Decorative Floating Leaves */}
-                    <div
+                    <div className="item-animateTwo"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -610,11 +622,11 @@ function Home() {
                         }}
                     >
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                            src="src/assets/img/icons/21.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "30vh",
+                                width: "10vh",
                                 height: "auto",
                                 top: "15%",
                                 left: "10%",
@@ -623,21 +635,22 @@ function Home() {
                             }}
                         />
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                            src="src/assets/img/icons/2.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
                                 width: "30vh",
                                 height: "auto",
                                 top: "40%",
-                                left: "80%",
+                                right: "5%",
                                 opacity: 0.8,
                                 animation: "float2 6s ease-in-out infinite",
                                 animationDelay: "1.5s",
+                                zIndex: 1000, // <-- Added here
                             }}
                         />
                         <img
-                            src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
+                            src="src/assets/img/icons/5.png"
                             alt="leaf"
                             style={{
                                 position: "absolute",
@@ -660,7 +673,18 @@ function Home() {
                             <div className="col-lg-6" data-aos="fade-right">
                                 <div className="softdrink-right">
                                     <p>
-                                        Hotel TFC stands as a beacon of traditional Indian culinary arts in the heart of Indapur...
+                                        Hotel TFC stands as a beacon of traditional
+                                        Indian culinary arts in the heart of Indapur.
+                                        We are a warm and welcoming restaurant
+                                        specializing in authentic Maharashtrian and
+                                        Punjabi non-vegetarian and vegetarian
+                                        dishes. Our mission is to present the true
+                                        essence of these rich culinary traditions,
+                                        focusing on the bold, rustic flavors of
+                                        Maharashtra and the beloved, comforting
+                                        tastes of Punjab. We believe that food is not
+                                        just sustenance, but an experience, a
+                                        memory, and a connection to our roots.
                                     </p>
                                     <h2>
                                         The Heartbeat of Indapur's <span>Heritage Cuisine</span>
@@ -668,7 +692,7 @@ function Home() {
                                     <div className="quote-box d-flex" data-aos="zoom-in">
                                         <span className="qq"><i className="fas fa-quote-right"></i></span>
                                         <div className="qoute-img">
-                                            <img src="assets/images/img/h31.png" alt="" />
+                                            <img src="src/assets/img/icons/11.png" className="item-animateTwo" alt="" />
                                         </div>
                                         <div className="quote-content">
                                             <h5>The Heartbeat of Indapur's Heritage Cuisine.</h5>
@@ -680,36 +704,24 @@ function Home() {
                             </div>
 
                             {/* Right Image Grid */}
-                            <div className="col-lg-6" data-aos="fade-left">
-                                <div className="row">
-                                    <div className="col-6" data-aos="zoom-in">
-                                        <img src="src/assets/img/Whoweimg/htimg3.png" className="img-fluid w-100 h-75" alt="" />
-                                    </div>
-                                    <div className="col-6" data-aos="zoom-in" data-aos-delay="100">
-                                        <img src="src/assets/img/Whoweimg/htimg1.jpg" className="img-fluid w-100 h-75" alt="" />
-                                    </div>
-                                    <div className="col-6" data-aos="zoom-in" data-aos-delay="200">
-                                        <img src="src/assets/img/Whoweimg/htimg2.jpg" className="img-fluid w-100 h-75" alt="" />
-                                    </div>
-                                    <div className="col-6" data-aos="zoom-in" data-aos-delay="300">
-                                        <img src="src/assets/img/Whoweimg/htimg4.png" className="img-fluid w-100 h-75" alt="" />
-                                    </div>
-                                </div>
+                            <div className="col-lg-6" data-aos="fade-left" >
+                                <img src="src/assets/img/OurSpecialitiesimg/who are we_ (1).png" alt="" style={{ marginLeft: "90px" }} />
+
                             </div>
                         </div>
 
                         {/* ✅ Decorative Animated Background Shapes */}
-                        <div className="decorative-shapes position-absolute top-0 start-0 w-100 h-100">
+                        <div className="decorative-shapes position-absolute item-animateTwo top-0 start-0 w-100 h-100">
                             <span className="position-absolute floating" style={{ top: "20%", left: "-40px" }}>
                                 <img
-                                    src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
+                                    src="src/assets/img/icons/8.png"
                                     alt="Decorative Left"
                                     style={{ width: "80px", height: "80px" }}
                                 />
                             </span>
-                            <span className="position-absolute rotating" style={{ bottom: "10%", right: "30px" }}>
+                            <span className="position-absolute  rotating" style={{ bottom: "10%", right: "30px" }}>
                                 <img
-                                    src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                                    src="src/assets/img/icons/10.png"
                                     alt="Decorative Right"
                                     style={{ width: "100px", height: "100px" }}
                                 />
@@ -723,95 +735,98 @@ function Home() {
 
 
                 {/*Why Tfc section */}
-               <section className="drink-ind py-5 m-0 p-0 overflow-hidden">
-    <div className="container">
-        <h1 className="text-center mb-4" data-aos="zoom-in">Why TFC?</h1>
+                <section className="drink-ind py-5 m-0 p-0 overflow-hidden">
+                    <div className="container-fluid p-0 m-0">
+                        <h1 className="text-center mb-4" data-aos="zoom-in">Why TFC?</h1>
 
-        <div className="row align-items-center gy-5">
+                        <div className="row align-items-center gy-5">
 
-            {/* Left Image with Decorative Shapes */}
-            <div className="col-lg-6 col-md-12 position-relative" data-aos="fade-right">
-                <div className="drink-ind-left text-center">
-                    <img
-                        src="src/assets/img/Homeimg/Spice.jpeg"
-                        alt="Why TFC"
-                        className="img-fluid w-100 mx-auto"
-                        style={{ maxWidth: "500px", height: "auto" }}
-                    />
+                            {/* Left Image with Decorative Shapes */}
 
-                    {/* Decorative Floating and Rotating Shapes */}
-                    <div className="position-absolute top-0 start-0 w-100 h-100">
-                        <span className="position-absolute floating d-none d-md-block" style={{ top: "10%", left: "-40px" }} data-aos="fade-in">
-                            <img
-                                src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
-                                alt="Floating Shape"
-                                style={{ width: "80px", height: "80px" }}
-                            />
-                        </span>
-                        <span className="position-absolute rotating d-none d-md-block" style={{ bottom: "10%", right: "-30px" }} data-aos="fade-in">
-                            <img
-                                src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
-                                alt="Rotating Shape"
-                                style={{ width: "100px", height: "100px" }}
-                            />
-                        </span>
-                    </div>
-                </div>
-            </div>
 
-            {/* Right Content */}
-            <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                <div className="drink-ind-right">
-                    <div className="common-title-area3 text-center text-lg-start mb-4">
-                        <h2>
-                            Best Ingredients
-                            <br />
-                            Food Juices <span>On Right Handmade</span>
-                        </h2>
-                    </div>
+                            <div className="col-lg-6 col-md-12 p-0 position-relative " data-aos="fade-right">
+                                <div className="drink-ind-left text-center">
+                                    <img
+                                        src="src/assets/img/OurSpecialitiesimg/why tfc_ (1).png"
+                                        alt="Why TFC"
+                                        className="img-fluid w-100 "
+                                        style={{ maxWidth: "90%", height: "100%" }}
+                                    />
 
-                    <div className="row g-4">
-                        {/* Feature 1 */}
-                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                            <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
-                                <div className="fea-img mb-3 mb-sm-0 me-sm-3">
-                                    {/* <img
+                                    {/* Decorative Floating and Rotating Shapes */}
+                                    <div className="position-absolute item-animateTwo top-0 start-0 w-100 h-100">
+                                        {/* <span className="position-absolute floating d-none d-md-block" style={{ top: "10%", left: "-40px" }} data-aos="fade-in">
+                                            <img
+                                                src="src/assets/img/icons/18.png"
+                                                alt="Floating Shape"
+                                                style={{ width: "80px", height: "80px" }}
+                                            />
+                                        </span> */}
+                                        <span className="position-absolute rotating d-none d-md-block" style={{ bottom: "10%", right: "-30px" }} data-aos="fade-in">
+                                            <img
+                                                src="src/assets/img/icons/17.png"
+                                                alt="Rotating Shape"
+                                                style={{ width: "100px", height: "100px" }}
+                                            />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Content */}
+                            <div className="col-lg-6 col-md-12" data-aos="fade-left">
+                                <div className="drink-ind-right">
+                                    <div className="common-title-area3 text-center text-lg-start mb-4">
+                                        <h2>
+                                            Authenticity Guaranteed:
+
+                                            <br />
+                                            Real regional flavors, <span> no gimmicks.</span>
+                                        </h2>
+                                    </div>
+
+                                    <div className="row g-4">
+                                        {/* Feature 1 */}
+                                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                                            <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
+                                                <div className="fea-img mb-3 mb-sm-0 me-sm-3">
+                                                    {/* <img
                                         src="assets/images/img/htshape3.png"
                                         alt="Quality Hops"
                                         className="img-fluid"
                                         style={{ maxWidth: "80px" }}
                                     /> */}
-                                </div>
-                                <div className="fea-content">
-                                    <h5>Quality Hops</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
+                                                </div>
+                                                <div className="fea-content">
+                                                    <h5>Quality Hops</h5>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        {/* Feature 2 */}
-                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                            <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
-                                <div className="fea-img mb-3 mb-sm-0 me-sm-3">
-                                    <img
-                                        src="assets/images/img/htshape4.png"
-                                        alt="Premium Malts"
-                                        className="img-fluid"
-                                        style={{ maxWidth: "80px" }}
-                                    />
-                                </div>
-                                <div className="fea-content">
-                                    <h5>Premium Malts</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        {/* Feature 2 */}
+                                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                                            <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
+                                                <div className="fea-img mb-3 mb-sm-0 me-sm-3">
+                                                    <img
+                                                        src="assets/images/img/htshape4.png"
+                                                        alt="Premium Malts"
+                                                        className="img-fluid"
+                                                        style={{ maxWidth: "80px" }}
+                                                    />
+                                                </div>
+                                                <div className="fea-content">
+                                                    <h5>Premium Malts</h5>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> {/* row end */}
                                 </div>
                             </div>
                         </div>
-                    </div> {/* row end */}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                    </div>
+                </section>
 
 
 
@@ -822,7 +837,6 @@ function Home() {
                 <section className="food-brand-section py-5 m-0 p-0 overflow-hidden">
                     <div className="container">
                         <div className="row align-items-center gy-5">
-
                             {/* Left Content */}
                             <div className="col-lg-5 col-md-12 position-relative" data-aos="fade-left">
                                 <div className="food-brand-left text-center text-md-start">
@@ -830,7 +844,7 @@ function Home() {
                                         <h2 className="mb-3" data-aos="zoom-in" data-aos-delay="100">
                                             Home-Cooked Goodness:
                                             <br />
-                                            Handmade masalas and <span>slow-cooking techniques. Food Included</span>
+                                            Handmade masalas and <span>slow-cooking techniques.</span>
                                         </h2>
                                         <p data-aos="fade-up" data-aos-delay="200">
                                             Christmas is coming! Get your gifts sorted early, then you can sit back and enjoy some festive beers for yourself!
@@ -868,43 +882,47 @@ function Home() {
                             </div>
 
                             {/* Right Image + Decorative Shapes */}
-                            <div className="col-lg-6 col-md-12 position-relative" data-aos="fade-right">
+                            <div className="col-lg-7 col-md-12 position-relative" data-aos="fade-right">
                                 <div className="food-brand-right text-center position-relative">
                                     <img
-                                        src="src/assets/img/Homeimg/Spice.jpeg"
+                                        src="src/assets/img/OurSpecialitiesimg/home made masal_ (1).png"
                                         alt="Food Brand Visual"
                                         className="img-fluid"
-                                        style={{ maxWidth: "500px", height: "auto" }}
+                                        style={{
+                                            maxWidth: "100%",
+                                            height: "auto",
+                                            margin: "0 auto",
+                                            display: "block"
+                                        }}
                                     />
 
                                     {/* Decorative Shapes */}
                                     <div className="decorative-shapes position-absolute top-0 start-0 w-100 h-100">
                                         <span
-                                            className="position-absolute floating"
-                                            style={{ top: "10%", left: "-30px" }}
+                                            className="position-absolute floating item-animateTwo"
+                                            style={{ top: "10%", left: "-10px" }}
                                             data-aos="zoom-in"
                                         >
                                             <img
-                                                src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
+                                                src="src/assets/img/icons/18.png"
                                                 alt="Shape 1"
-                                                style={{ width: "80px", height: "80px" }}
+                                                style={{ width: "60px", height: "60px" }}
                                             />
                                         </span>
                                         <span
-                                            className="position-absolute rotating"
-                                            style={{ bottom: "0", right: "-40px" }}
+                                            className="position-absolute rotating item-animateTwo"
+                                            style={{ bottom: "10px", right: "-20px" }}
                                             data-aos="fade-up"
                                         >
                                             <img
-                                                src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
+                                                src="src/assets/img/icons/24.png"
                                                 alt="Shape 2"
-                                                style={{ width: "100px", height: "100px" }}
+                                                style={{ width: "80px", height: "80px" }}
                                             />
                                         </span>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </section>
@@ -912,110 +930,115 @@ function Home() {
 
 
 
-                {/*drink-ind section */}
-                <section className="drink-ind py-5 m-0 p-0 overflow-hidden" data-aos="fade-up">
-                    <div className="container">
-                        <div className="row align-items-center gy-5">
 
-                            {/* Left Image + Decorative Shapes */}
-                            <div className="col-lg-6 col-md-12 position-relative" data-aos="fade-right">
-                                <div className="drink-ind-left text-center">
-                                    <img
-                                        src="src/assets/img/Whytfc/htshape19.png"
-                                        alt="Unmatched Heritage"
-                                        className="img-fluid w-100"
-                                        style={{ maxWidth: "500px" }}
-                                    />
-                                </div>
+                {/* Drink Section */}
+                <div className="container-fluid">
+                    <section
+                        className="drink-ind py-5 overflow-hidden position-relative"
+                        data-aos="fade-up"
+                        style={{
+                            backgroundImage: 'url("src/assets/img/icons/who are we_.png")',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            padding: "40px",
+                            height: "80vh",
+                        }}
+                    >
+                        <div className="container">
+                            <div className="row align-items-center gy-5">
 
-                                {/* Decorative Shapes */}
-                                <div className="position-absolute top-0 start-0 w-100 h-100">
-                                    <span
-                                        className="position-absolute floating"
-                                        style={{ top: "15%", left: "-40px" }}
-                                        data-aos="zoom-in"
-                                    >
-                                        <img
-                                            src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
-                                            alt="Decor Shape 1"
-                                            style={{ width: "80px", height: "80px" }}
-                                        />
-                                    </span>
-                                    <span
-                                        className="position-absolute rotating"
-                                        style={{ bottom: "10px", right: "-40px" }}
-                                        data-aos="fade-up"
-                                    >
-                                        <img
-                                            src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
-                                            alt="Decor Shape 2"
-                                            style={{ width: "100px", height: "100px" }}
-                                        />
-                                    </span>
-                                </div>
-                            </div>
-
-                            {/* Right Content */}
-                            <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                <div className="drink-ind-right">
-                                    <div className="common-title-area3 text-center text-md-start mb-4">
-                                        <h2 data-aos="zoom-in" data-aos-delay="100">
-                                            Unmatched Heritage:
-                                            <br />
-                                            Recipes passed down <span>through generations.</span>
-                                        </h2>
+                                {/* Left Decorative Area - Now no background here */}
+                                <div
+                                    className="col-lg-6 col-md-12 item-animateTwo position-relative"
+                                    data-aos="fade-right"
+                                >
+                                    {/* Decorative Shapes */}
+                                    <div className="position-absolute item-animateTwo top-0 start-0 w-100 h-100">
+                                        <span
+                                            className="position-absolute floating d-none d-sm-block"
+                                            style={{ top: '15%', left: '-40px' }}
+                                            data-aos="zoom-in"
+                                        >
+                                            <img
+                                                src="src/assets/img/icons/20.png"
+                                                alt="Decor Shape 1"
+                                                style={{ width: '60px', height: '60px' }}
+                                            />
+                                        </span>
+                                        <span
+                                            className="position-absolute rotating d-none d-sm-block"
+                                            style={{ bottom: '10px', right: '-30px' }}
+                                            data-aos="fade-up"
+                                        >
+                                            <img
+                                                src="src/assets/img/icons/22.png"
+                                                alt="Decor Shape 2"
+                                                style={{ width: '80px', height: '90px', padding: "4px" }}
+                                            />
+                                        </span>
                                     </div>
-
-                                    <div className="row g-4">
-                                        {/* Feature 1 */}
-                                        <div className="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                            <div className="single-fea d-flex flex-column flex-md-row align-items-center text-center text-md-start">
-                                                <div className="fea-img mb-3 mb-md-0 me-md-3">
-                                                    <img
-                                                        src="assets/images/img/htshape3.png"
-                                                        alt="Quality Hops"
-                                                        className="img-fluid"
-                                                        style={{ maxWidth: "70px" }}
-                                                    />
-                                                </div>
-                                                <div className="fea-content">
-                                                    <h5>Quality Hops</h5>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Feature 2 */}
-                                        <div className="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                            <div className="single-fea d-flex flex-column flex-md-row align-items-center text-center text-md-start">
-                                                <div className="fea-img mb-3 mb-md-0 me-md-3">
-                                                    <img
-                                                        src="assets/images/img/htshape4.png"
-                                                        alt="Premium Malts"
-                                                        className="img-fluid"
-                                                        style={{ maxWidth: "70px" }}
-                                                    />
-                                                </div>
-                                                <div className="fea-content">
-                                                    <h5>Premium Malts</h5>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> {/* End Features Row */}
                                 </div>
+
+                                {/* Right Content */}
+                                <div className="col-lg-6 col-md-12" data-aos="fade-left">
+                                    <div className="drink-ind-right text-center text-md-start">
+                                        <div className="common-title-area3 mb-4">
+                                            <h2 data-aos="zoom-in" data-aos-delay="100" className="fs-3">
+                                                Unmatched Heritage:<br />
+                                                Recipes passed down <span>through generations.</span>
+                                            </h2>
+                                        </div>
+
+                                        <div className="row g-4">
+                                            {/* Feature 1 */}
+                                            <div className="col-sm-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                                                <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
+                                                    <div className="fea-img mb-3 mb-sm-0 me-sm-3">
+                                                        <img
+                                                            src="assets/images/img/htshape3.png"
+                                                            alt="Quality Hops"
+                                                            className="img-fluid"
+                                                            style={{ maxWidth: '60px' }}
+                                                        />
+                                                    </div>
+                                                    <div className="fea-content">
+                                                        <h5 className="fs-6 fw-bold">Quality Hops</h5>
+                                                        <p className="mb-0 small">Lorem ipsum dolor sit amet consectetur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Feature 2 */}
+                                            <div className="col-sm-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                                                <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
+                                                    <div className="fea-img mb-3 mb-sm-0 me-sm-3">
+                                                        <img
+                                                            src="assets/images/img/htshape4.png"
+                                                            alt="Premium Malts"
+                                                            className="img-fluid"
+                                                            style={{ maxWidth: '60px' }}
+                                                        />
+                                                    </div>
+                                                    <div className="fea-content">
+                                                        <h5 className="fs-6 fw-bold">Premium Malts</h5>
+                                                        <p className="mb-0 small">Lorem ipsum dolor sit amet consectetur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
 
 
 
-
-
-                {/*food-brand section */}
-                <section className="food-brand-section py-5 m-0 p-0" data-aos="fade-up">
+                {/* Food Brand Section */}
+                <section className="food-brand-section py-5" data-aos="fade-up">
                     <div className="container">
                         <div className="row align-items-center gy-5">
 
@@ -1024,20 +1047,21 @@ function Home() {
                                 <div className="food-brand-left text-center text-md-start position-relative">
                                     <div className="common-title-area3 mb-4">
                                         <h2 className="mb-3">
-                                            Brand Iced Green Tea Lemon <br />
-                                            <span>Juice Food Included</span>
+                                            Value & Portions: Hearty meals,
+                                            generous thalis, <br />
+                                            <span>and great value.</span>
                                         </h2>
                                         <p>
-                                            Christmas is coming! Get your gifts sorted early, then you can sit back and enjoy some festive beers for yourself!
+                                            Christmas is coming! Get your gifts sorted early, then enjoy some festive beers for yourself!
                                         </p>
                                     </div>
 
-                                    {/* Juice Details */}
+                                    {/* Juice Info */}
                                     <div className="inner-brand my-4">
                                         <div className="row text-center">
                                             <div className="col-4" data-aos="fade-up" data-aos-delay="100">
                                                 <div className="single-percentage">
-                                                    <h6>Extact Juice</h6>
+                                                    <h6>Extract Juice</h6>
                                                     <h3>15%</h3>
                                                 </div>
                                             </div>
@@ -1056,32 +1080,58 @@ function Home() {
                                         </div>
                                     </div>
 
-                                    <a href="shopping-cart.html" className="btn2" data-aos="zoom-in" data-aos-delay="400">
+                                    <a
+                                        href="shopping-cart.html"
+                                        className="btn2 d-inline-block"
+                                        data-aos="zoom-in"
+                                        data-aos-delay="400"
+                                    >
                                         Shop Now
                                     </a>
                                 </div>
                             </div>
 
-                            {/* Right Image with Decorative Shapes */}
-                            <div className="col-lg-6 col-md-12 offset-lg-1 text-center position-relative" data-aos="fade-left">
-                                <div className="food-brand-right">
+                            {/* Right Image */}
+                            <div
+                                className="col-lg-6 col-md-12 offset-lg-1 text-center position-relative"
+                                data-aos="fade-left"
+                            >
+                                <div
+                                    className="food-brand-right mx-auto"
+                                    style={{
+                                        maxWidth: "100%",
+                                        width: "100%",
+                                    }}
+                                >
                                     <img
-                                        src="src/assets/img/Whytfc/htshape23.png"
+                                        src="src/assets/img/OurSpecialitiesimg/thali .png"
                                         alt="Iced Green Tea"
-                                        className="img-fluid w-100"
-                                        style={{ maxWidth: "500px" }}
+                                        className="img-fluid item-animateTwo"
+                                        style={{
+                                            width: "100%",
+                                            maxWidth: "800px",
+                                            height: "auto",
+                                        }}
                                     />
 
                                     {/* Decorative Shapes */}
-                                    <div className="decorative-shapes position-absolute top-0 start-0 w-100 h-100">
-                                        <span className="position-absolute floating" style={{ top: "20%", left: "-30px" }} data-aos="zoom-in">
+                                    <div className="decorative-shapes item-animateTwo position-absolute top-0 start-0 w-100 h-100">
+                                        <span
+                                            className="position-absolute floating d-none d-sm-block"
+                                            style={{ top: "20%", left: "-30px" }}
+                                            data-aos="zoom-in"
+                                        >
                                             <img
                                                 src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png"
                                                 alt="Decor Shape 1"
                                                 style={{ width: "80px", height: "80px" }}
                                             />
                                         </span>
-                                        <span className="position-absolute rotating" style={{ bottom: "0", right: "-40px" }} data-aos="fade-left">
+                                        <span
+                                            className="position-absolute item-animateTwo rotating d-none d-sm-block"
+                                            style={{ bottom: "0", right: "-40px" }}
+                                            data-aos="fade-left"
+                                        >
                                             <img
                                                 src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png"
                                                 alt="Decor Shape 2"
@@ -1100,56 +1150,99 @@ function Home() {
 
 
 
+
                 {/*drink-ind section */}
                 <section className="drink-ind py-5 m-0 p-0" data-aos="fade-up">
-                    <div className="container">
+                    <div className="container-fluid">
                         <div className="row align-items-center gy-5">
-
                             {/* Left Column - Image and Decorative Shapes */}
-                            <div className="col-lg-6 col-md-12 d-flex justify-content-center position-relative" data-aos="fade-right">
+                            <div
+                                className="col-lg-6 col-md-12 d-flex justify-content-center position-relative"
+                                data-aos="fade-right"
+                            >
                                 <div className="drink-ind-left text-center">
                                     <img
-                                        src="src/assets/img/Whytfc/htshape19.png"
+                                        src="src/assets/img/OurSpecialitiesimg/family.png"
                                         alt="Drink Ingredients"
-                                        className="img-fluid w-100"
-                                        style={{ maxWidth: "500px" }}
+                                        className="img-fluid"
+                                        style={{
+                                            maxWidth: "90%",
+                                            height: "auto",
+                                        }}
                                     />
                                 </div>
 
-                                {/* Decorative Shapes - positioned around the image */}
+                                {/* Decorative Shapes */}
                                 <div className="drink-items-shapes position-absolute top-0 start-0 w-100 h-100">
-                                    <span className="fs-1 item-animateOne position-absolute" style={{ top: "100px", left: "0" }}>
-                                        <img src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png" alt="shape1" style={{ height: "100px", width: "100px" }} />
+                                    <span
+                                        className="fs-1 item-animateOne position-absolute"
+                                        style={{ top: "60px", left: "10px" }}
+                                    >
+                                        <img
+                                            src="src/assets/img/icons/12.png"
+                                            alt="shape1"
+                                            style={{ height: "80px", width: "80px" }}
+                                        />
                                     </span>
-                                    <span className="fs-2 position-absolute" style={{ bottom: "10px", right: "0" }}>
-                                        <img src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png" alt="shape2" style={{ height: "70px", width: "70px" }} />
+                                    <span
+                                        className="fs-2 item-animateTwo position-absolute"
+                                        style={{ bottom: "10px", right: "10px" }}
+                                    >
+                                        <img
+                                            src="src/assets/img/icons/9.png"
+                                            alt="shape2"
+                                            style={{ height: "60px", width: "60px" }}
+                                        />
                                     </span>
-                                    <span className="fs-3 item-animateTwo position-absolute" style={{ top: "50%", right: "10px", transform: "translateY(-50%)" }}>
-                                        <img src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png" alt="shape3" style={{ height: "80px", width: "80px" }} />
+                                    <span
+                                        className="fs-3 item-animateTwo position-absolute"
+                                        style={{
+                                            top: "50%",
+                                            right: "20px",
+                                            transform: "translateY(-50%)",
+                                        }}
+                                    >
+                                        <img
+                                            src="src/assets/img/icons/17.png"
+                                            alt="shape3"
+                                            style={{ height: "70px", width: "70px" }}
+                                        />
                                     </span>
-                                    <span className="fs-4 position-absolute" style={{ top: "10px", right: "30%" }}>
-                                        <img src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png" alt="shape4" style={{ height: "70px", width: "70px" }} />
+                                    <span
+                                        className="fs-4 item-animateTwo position-absolute"
+                                        style={{ top: "10px", right: "30%" }}
+                                    >
+                                        <img
+                                            src="src/assets/img/icons/16.png"
+                                            alt="shape4"
+                                            style={{ height: "60px", width: "60px" }}
+                                        />
                                     </span>
                                 </div>
                             </div>
 
                             {/* Right Column - Text Content */}
-                            <div className="col-lg-6 col-md-12" data-aos="fade-left">
+                            <div className="col-lg-6 col-md-12 px-4" data-aos="fade-left">
                                 <div className="drink-ind-right">
                                     <div className="common-title-area3 text-center text-md-start mb-4">
                                         <h2>
-                                            Best Ingredients <br />
-                                            Food Juices <span>On Right Handmade</span>
+                                            Warm Hospitality:
+                                            A family-friendly <br className="d-none d-md-block" />
+                                            atmosphere<span> that feels like home</span>
                                         </h2>
                                     </div>
 
                                     <div className="row g-4">
                                         {/* Feature 1 */}
-                                        <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                        <div
+                                            className="col-md-6"
+                                            data-aos="fade-up"
+                                            data-aos-delay="100"
+                                        >
                                             <div className="single-fea d-flex flex-column flex-md-row align-items-center text-center text-md-start">
                                                 <div className="fea-img mb-3 mb-md-0 me-md-3">
                                                     <img
-                                                        src="assets/images/img/htshape3.png"
+                                                        src="src/assets/img/icons/why tfc_.png"
                                                         alt="Quality Hops"
                                                         className="img-fluid"
                                                         style={{ maxWidth: "70px" }}
@@ -1163,7 +1256,11 @@ function Home() {
                                         </div>
 
                                         {/* Feature 2 */}
-                                        <div className="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                        <div
+                                            className="col-md-6"
+                                            data-aos="fade-up"
+                                            data-aos-delay="200"
+                                        >
                                             <div className="single-fea d-flex flex-column flex-md-row align-items-center text-center text-md-start">
                                                 <div className="fea-img mb-3 mb-md-0 me-md-3">
                                                     <img
@@ -1179,7 +1276,8 @@ function Home() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> {/* End Feature Row */}
+                                    </div>
+                                    {/* End Feature Row */}
                                 </div>
                             </div>
                         </div>
@@ -1189,21 +1287,22 @@ function Home() {
 
 
 
+
                 {/*Explore Our Signature Dishes section */}
                 <section className="drink-items-section py-5 m-0 p-0" data-aos="fade-up" id="dishes">
                     {/* Decorative Shapes */}
                     <div className="drink-items-shapes" id="ExploreOurSignatureDishes">
                         <span className="fs-1 item-animateOne">
-                            <img src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png" alt="shape1" style={{ height: "200px", width: "200px", marginTop: "100px" }} />
+                            <img src="src/assets/img/icons/9.png" alt="shape1" style={{ height: "100px", width: "100px", marginTop: "10px" }} />
                         </span>
                         <span className="fs-2">
-                            <img src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png" alt="shape2" />
+                            <img src="src/assets/img/icons/8.png" alt="shape2" style={{ height: "100px", width: "100px", marginTop: "10px" }} />
                         </span>
                         <span className="fs-3 item-animateTwo">
-                            <img src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png" alt="shape3" />
+                            <img src="src/assets/img/icons/13.png" alt="shape3" style={{ height: "100px", width: "100px", marginTop: "10px" }} />
                         </span>
                         <span className="fs-4">
-                            <img src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png" alt="shape4" />
+                            <img src="src/assets/img/icons/14.png" alt="shape4" style={{ height: "100px", width: "100px", marginTop: "10px" }} />
                         </span>
                     </div>
 
@@ -1214,6 +1313,7 @@ function Home() {
                                 {category === "signature" && (
                                     <>
                                         Explore Our <span>Signature Dishes</span>
+
                                     </>
                                 )}
                                 {category === "maharashtrian" && (
@@ -1227,6 +1327,7 @@ function Home() {
                                     </>
                                 )}
                             </h2>
+                            <p className="fs-5">A Feast of Time-Honored Flavors.</p>
                             <div className="mt-3">
                                 <button
                                     className={`btn2 mx-2 ${category === "maharashtrian" ? "active" : ""}`}
@@ -1281,29 +1382,31 @@ function Home() {
                             {dishes[category].map((dish, index) => (
                                 <SwiperSlide key={index}>
                                     <div
-                                        className="single-dishes home3-single-dishes text-center h-100"
+                                        className="card h-100 shadow-sm border rounded-4 overflow-hidden"
                                         data-aos="fade-up"
                                         data-aos-delay={100 * (index + 1)}
                                     >
-                                        <div className="dish-img">
-                                            <img src={dish.img} alt={dish.name} className="img-fluid" />
-                                        </div>
-                                        <div className="dish-content">
-                                            <h5><a href="#">{dish.name}</a></h5>
-                                            <p>
-                                                Delicious {category.charAt(0).toUpperCase() + category.slice(1)} cuisine.
-                                            </p>
-                                            <span className="price">Price: {dish.price}</span>
-                                        </div>
-                                        {dish.badge && <span className="badge">{dish.badge}</span>}
-                                        <div className="cart-opt">
-                                            <a href="#"><i className="fas fa-heart"></i></a>
-                                            <a href="#"><i className="fas fa-shopping-basket"></i></a>
+                                        <img
+                                            src={dish.img}
+                                            alt={dish.name}
+                                            className="card-img-top"
+                                            style={{
+                                                height: "200px",
+                                                objectFit: "cover",
+                                                borderRadius: "1rem 1rem 0 0", // rounded top corners
+                                            }}
+                                        />
+                                        <div className="card-body text-center">
+                                            <h5 className="card-title">{dish.name}</h5>
+                                            {/* <a href="#" className="text-primary text-decoration-underline fw-semibold">
+                                                Buy Now
+                                            </a> */}
                                         </div>
                                     </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+
 
                         {/* CTA */}
                         <div className="text-center mt-5" data-aos="zoom-in">
@@ -1334,12 +1437,23 @@ function Home() {
                             <div className="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
                                 <div className="softdrink-right">
                                     <p>
-                                        Hotel TFC stands as a beacon of traditional Indian culinary arts in the heart of Indapur.
-                                        We are a warm and welcoming restaurant specializing in authentic Maharashtrian and
-                                        Punjabi non-vegetarian and vegetarian dishes. Our mission is to present the true essence
-                                        of these rich culinary traditions, focusing on the bold, rustic flavors of Maharashtra and
-                                        the beloved, comforting tastes of Punjab. We believe that food is not just sustenance, but
-                                        an experience, a memory, and a connection to our roots.
+                                        Hotel TFC was born from a deep-seated passion for authentic Indian
+                                        cuisine, particularly the rustic and soul-satisfying non-vegetarian dishes of
+                                        Maharashtra. Growing up, I always admired how other regional cuisines,
+                                        like Punjabi food, gained national fame. Yet, I felt that Maharashtrian
+                                        mutton dishes, with their incredible depth of flavor, didn't receive the
+                                        widespread recognition they truly deserved.
+                                        My childhood kitchen was a classroom of love, patience, and tradition. It
+                                        taught me the magic of simple, home-style cooking – how homemade
+                                        masalas, slow-cooking, and cherished family recipes create an
+                                        unparalleled taste that ready-made packets simply cannot replicate.
+                                        This profound appreciation for culinary heritage inspired me to create
+                                        Hotel TFC. It's more than just a restaurant; it's a heartfelt tribute to our
+                                        culture, a place where generations of culinary wisdom come alive on your
+                                        plate. We envision Hotel TFC as a gathering spot where people can enjoy
+                                        hearty meals, connect through shared flavors, and celebrate tradition. It's
+                                        not just food; it's our identity.
+                                        From Passion to Plate: Our Culinary Journey.
                                     </p>
 
                                     <h2 className="my-4">
@@ -1366,7 +1480,8 @@ function Home() {
 
                             {/* Right Images */}
                             <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                <div className="row g-3">
+                                <img src="src/assets/img/OurSpecialitiesimg/our story .png" alt="" style={{height:"100vh",width:"110vh"}}/>
+                                {/* <div className="row g-3">
                                     {[
                                         "htimg3.png",
                                         "htimg1.jpg",
@@ -1381,7 +1496,7 @@ function Home() {
                                             />
                                         </div>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -1395,10 +1510,10 @@ function Home() {
                         {/* Decorative Shapes */}
                         <div className="del-shapes">
                             <span className="ds-1 item-bounce">
-                                <img src="src/assets/img/Exploreitems/Untitled_design__1_-removebg-preview.png" alt="shape" style={{ marginTop: "-60px", width: "40vh", marginLeft: "-10px" }} />
+                                <img src="src/assets/img/icons/24.png" alt="shape" style={{ marginTop: "-60px", width: "20vh", marginLeft: "-10px" }} />
                             </span>
                             <span className="ds-2 item-bounce">
-                                <img src="src/assets/img/Exploreitems/Untitled_design-removebg-preview.png" alt="shape" style={{ marginTop: "60px", width: "40vh" }} />
+                                <img src="src/assets/img/icons/21.png" alt="shape" style={{ marginTop: "60px", width: "40vh" }} />
                             </span>
                         </div>
 
@@ -1571,7 +1686,7 @@ function Home() {
                 >
                     {/* Decorative Shapes */}
                     <div
-                        className="footer-shapes position-absolute w-100 h-100"
+                        className="footer-shapes item-animateTwo  position-absolute w-100 h-100"
                         style={{
                             top: 0,
                             left: 0,
@@ -1581,26 +1696,26 @@ function Home() {
                     >
                         <span className="shape shape-1" data-aos="fade-up-right">
                             <img
-                                src="assets/images/shapes/leaf-1.png"
+                                src="src/assets/img/icons/18.png"
                                 alt="decor"
                                 className="img-fluid"
-                                style={{ width: "60px", position: "absolute", top: "10%", left: "5%" }}
+                                style={{ width: "20vh", position: "absolute", top: "10%", left: "5%" }}
                             />
                         </span>
                         <span className="shape shape-2" data-aos="fade-down-left" data-aos-delay="200">
                             <img
-                                src="assets/images/shapes/leaf-2.png"
+                                src="src/assets/img/icons/16.png"
                                 alt="decor"
                                 className="img-fluid"
-                                style={{ width: "50px", position: "absolute", bottom: "20%", right: "10%" }}
+                                style={{ width: "20vh", position: "absolute", bottom: "20%", right: "10%" }}
                             />
                         </span>
                         <span className="shape shape-3" data-aos="zoom-in" data-aos-delay="400">
                             <img
-                                src="assets/images/shapes/abstract-circle.png"
+                                src="src/assets/img/icons/8.png"
                                 alt="decor"
                                 className="img-fluid"
-                                style={{ width: "40px", position: "absolute", top: "50%", right: "30%" }}
+                                style={{ width: "10vh", position: "absolute", top: "50%", right: "30%" }}
                             />
                         </span>
                     </div>
@@ -1679,19 +1794,33 @@ function Home() {
                                 <div className="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
                                     <div className="widget text-center text-sm-start">
                                         <h6 className="mb-3">Newsletter</h6>
-                                        <form action="#" className="newsletter newsletter-3 d-flex flex-wrap">
+
+                                        <form
+                                            className="newsletter newsletter-3 d-flex flex-wrap"
+                                            onSubmit={handleSubmit}
+                                        >
                                             <input
                                                 type="email"
                                                 placeholder="Enter your email"
                                                 className="form-control me-2 mb-2"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
                                             />
                                             <button type="submit" className="btn btn-outline-dark mb-2">
                                                 <i className="fas fa-paper-plane"></i>
                                             </button>
                                         </form>
-                                        <a href="#" className="btn2 mt-2 d-inline-block">Subscribe</a>
+
+                                        {/* Optional: Subscribe button below (can be removed if redundant) */}
+                                        <button
+                                            onClick={handleSubmit}
+                                            className="btn2 mt-2 d-inline-block border-0 bg-transparent text-decoration-underline"
+                                        >
+                                            Subscribe
+                                        </button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
