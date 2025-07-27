@@ -541,8 +541,10 @@ function Home() {
                                 </div>
                             </div>
 
+                           
+
                             <div className="col-lg-3 col-md-6" data-aos="zoom-in" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM.jpeg" }}>
-                                <div className="gallery-img-3 text-center">
+                                <div className="gallery text-center">
                                     <h5>Home<br />-Made<br />Masalas</h5>
                                     {/* <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (2).jpeg" alt="" className="img-fluid mb-2" />
                                     <img src="assets/images/shapes/41.png" alt="" className="img-fluid s1" /> */}
@@ -551,9 +553,9 @@ function Home() {
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6" data-aos="zoom-in-up">
-                                <div className="gallery-img-2 text-center">
-                                    <img src="src/assets/img/WhatsAppimg/cooking2.jpg" alt="" className="img-fluid mb-2" />
+                            <div className="col-lg-3 col-md-6" data-aos="zoom-in-up" >
+                                <div className="gallery-img-2 text-center"style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/cooking2.jpg"}}>
+                                    {/* <img src="src/assets/img/WhatsAppimg/cooking2.jpg" alt="" className="img-fluid mb-2" /> */}
                                     <span className="gprice-1">$15</span>
                                     <div className="gimg-content">
                                         <h5>Home-Made<br />Masalas</h5>
@@ -565,19 +567,19 @@ function Home() {
 
                         {/* Bottom Row */}
                         <div className="row g-4 mt-4">
-                            <div className="col-lg-3 col-md-6" data-aos="fade-up-right">
-                                <div className="gallery-img-3 text-center">
+                            <div className="col-lg-3 col-md-6" data-aos="fade-up-right" style={{ backgroundImage:"url('src/assets/img/WhatsAppimg/cooking.jpg"}}>
+                                <div className="gallery text-center">
                                     <h5>Hearty <br />Vegetarian<br />Staples</h5>
-                                    <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid mb-2" />
+                                    {/* <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid mb-2" /> */}
                                     {/* <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid s1" /> */}
                                     <span className="gprice-2">$15</span><br />
-                                    {/* <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a> */}
+                                    <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
                                 </div>
                             </div>
 
                             <div className="col-lg-3 col-md-6" data-aos="fade-up">
                                 <div className="gallery-img-22 text-center">
-                                    <img src="assets/images/gallery/grid5.png" alt="" className="img-fluid mb-2" />
+                                    {/* <img src="assets/images/gallery/grid5.png" alt="" className="img-fluid mb-2" /> */}
                                     <span className="gprice-1">$15</span>
                                     <div className="gimg-content">
                                         <h5>Beloved <br /> Punjabi<br /> Favourites</h5>
@@ -592,8 +594,8 @@ function Home() {
                                     <h5>Rich Maharashtrian <br />Non-Veg Specials</h5>
                                     <p>Sale off 50% only this week</p>
                                     <a href="shopping-cart.html" className="btn btn-primary">Order Now</a><br />
-                                    <img src="assets/images/shapes/bbs.png" alt="" className="img-fluid mt-3" />
-                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid pbadge mt-2" />
+                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid mt-3" />
+                                    {/* <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid pbadge mt-2" /> */}
                                 </div>
                             </div>
                         </div>
