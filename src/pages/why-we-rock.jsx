@@ -51,13 +51,27 @@ const WhyWeRock = () => {
           {/* Right Column */}
           <div className="col-lg-6 col-md-12 rock-content" data-aos="fade-left">
             {/* Image */}
-            <div className="left-img text-center mb-4">
+            <div
+              className="left-img mb-4"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <img
-                src="/assets/images/founders.jpg"
+                src="src/assets/img/Whoweimg/IMG_2853.PNG"
                 alt="Founders"
-                className="img-fluid rounded shadow"
+                style={{
+                  width: "40%",
+                  height: "auto",
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                }}
               />
             </div>
+
 
             {/* Feature List */}
             <div className="right-features">
@@ -100,79 +114,79 @@ const WhyWeRock = () => {
 
         {/* Dummy Extra Content */}
         {showMore && (
-    <div className="more-content mt-4" data-aos="fade-up">
-  <h2 className="text-center fw-bold mb-4"><FaUtensils className="me-2 text-danger" />More About Us</h2>
+          <div className="more-content mt-4" data-aos="fade-up">
+            <h2 className="text-center fw-bold mb-4"><FaUtensils className="me-2 text-danger" />More About Us</h2>
 
-  <p className="text-center text-muted mb-5">
-    Partner with <strong>Hotel TFC</strong> as Your Exclusive Franchise Development Partner. Join the movement to popularize authentic Maharashtrian and Punjabi home-style cuisine with a business model rooted in tradition and growth.
-  </p>
+            <p className="text-center text-muted mb-5">
+              Partner with <strong>Hotel TFC</strong> as Your Exclusive Franchise Development Partner. Join the movement to popularize authentic Maharashtrian and Punjabi home-style cuisine with a business model rooted in tradition and growth.
+            </p>
 
-  {/* Franchise Opportunity */}
-  <div className="mb-5">
-    <h4 className="fw-bold mb-3"><FaRegHandshake className="me-2 text-success" />Franchise Opportunity</h4>
-    <ul className="list-unstyled ms-3">
-      <li>✔️ Authentic Indian cuisine franchise options</li>
-      <li>✔️ Affordable food business models</li>
-      <li>✔️ Home-style cooking with ancestral recipes</li>
-      <li>✔️ Support in chulha-based cooking methods</li>
-      <li>✔️ Proven success in traditional Indian food markets</li>
-    </ul>
-  </div>
+            {/* Franchise Opportunity */}
+            <div className="mb-5">
+              <h4 className="fw-bold mb-3"><FaRegHandshake className="me-2 text-success" />Franchise Opportunity</h4>
+              <ul className="list-unstyled ms-3">
+                <li>✔️ Authentic Indian cuisine franchise options</li>
+                <li>✔️ Affordable food business models</li>
+                <li>✔️ Home-style cooking with ancestral recipes</li>
+                <li>✔️ Support in chulha-based cooking methods</li>
+                <li>✔️ Proven success in traditional Indian food markets</li>
+              </ul>
+            </div>
 
-  {/* Target Franchisee */}
-  <div className="mb-5">
-    <h4 className="fw-bold mb-3"><FaUserTie className="me-2 text-primary" />Who We’re Looking For</h4>
-    <ul className="list-unstyled ms-3">
-      <li>🔹 Value authentic Indian cooking</li>
-      <li>🔹 Embrace traditional methods like chulha</li>
-      <li>🔹 Prioritize customer experience and expansion</li>
-      <li>🔹 Seek sustainable food business opportunities</li>
-    </ul>
-  </div>
+            {/* Target Franchisee */}
+            <div className="mb-5">
+              <h4 className="fw-bold mb-3"><FaUserTie className="me-2 text-primary" />Who We’re Looking For</h4>
+              <ul className="list-unstyled ms-3">
+                <li>🔹 Value authentic Indian cooking</li>
+                <li>🔹 Embrace traditional methods like chulha</li>
+                <li>🔹 Prioritize customer experience and expansion</li>
+                <li>🔹 Seek sustainable food business opportunities</li>
+              </ul>
+            </div>
 
-  {/* Support System */}
-  <div className="mb-5">
-    <h4 className="fw-bold mb-3"><MdOutlineSupportAgent className="me-2 text-warning" />Support We Provide</h4>
-    <div className="row">
-      <div className="col-md-6">
-        <ul className="list-unstyled ms-2">
-          <li><FaUserFriends className="me-2 text-info" />Staff Recruitment & Training</li>
-          <li><RiBuilding2Fill className="me-2 text-secondary" />Project Design & Architect Support</li>
-          <li><MdLocalShipping className="me-2 text-danger" />Supply Chain & Logistics</li>
-          <li><GiCookingPot className="me-2 text-success" />In-House Masala Supply</li>
-          <li><MdOutlineHowToVote className="me-2 text-dark" />Licensing & Documentation</li>
-        </ul>
-      </div>
-      <div className="col-md-6">
-        <ul className="list-unstyled ms-2">
-          <li><BiCheckShield className="me-2 text-primary" />Quality Check Audits</li>
-          <li><GiMeal className="me-2 text-success" />Healthy & Nutritious Cooking</li>
-          <li><FaUserFriends className="me-2 text-info" />Local Vendor Tie-ups</li>
-          <li><RiTeamFill className="me-2 text-warning" />Event & Corporate Tie-ups</li>
-          <li><FaChalkboardTeacher className="me-2 text-danger" />Ongoing Training Support</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+            {/* Support System */}
+            <div className="mb-5">
+              <h4 className="fw-bold mb-3"><MdOutlineSupportAgent className="me-2 text-warning" />Support We Provide</h4>
+              <div className="row">
+                <div className="col-md-6">
+                  <ul className="list-unstyled ms-2">
+                    <li><FaUserFriends className="me-2 text-info" />Staff Recruitment & Training</li>
+                    <li><RiBuilding2Fill className="me-2 text-secondary" />Project Design & Architect Support</li>
+                    <li><MdLocalShipping className="me-2 text-danger" />Supply Chain & Logistics</li>
+                    <li><GiCookingPot className="me-2 text-success" />In-House Masala Supply</li>
+                    <li><MdOutlineHowToVote className="me-2 text-dark" />Licensing & Documentation</li>
+                  </ul>
+                </div>
+                <div className="col-md-6">
+                  <ul className="list-unstyled ms-2">
+                    <li><BiCheckShield className="me-2 text-primary" />Quality Check Audits</li>
+                    <li><GiMeal className="me-2 text-success" />Healthy & Nutritious Cooking</li>
+                    <li><FaUserFriends className="me-2 text-info" />Local Vendor Tie-ups</li>
+                    <li><RiTeamFill className="me-2 text-warning" />Event & Corporate Tie-ups</li>
+                    <li><FaChalkboardTeacher className="me-2 text-danger" />Ongoing Training Support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-  {/* Brand & Marketing */}
-  <div className="mb-5">
-    <h4 className="fw-bold mb-3"><BiCheckShield className="me-2 text-primary" />Brand Identity & Marketing</h4>
-    <ul className="list-unstyled ms-3">
-      <li>🎯 Public relations & social media planning</li>
-      <li>🎯 Cross-marketing with other brands</li>
-      <li>🎯 Strong and growing brand identity</li>
-    </ul>
-  </div>
+            {/* Brand & Marketing */}
+            <div className="mb-5">
+              <h4 className="fw-bold mb-3"><BiCheckShield className="me-2 text-primary" />Brand Identity & Marketing</h4>
+              <ul className="list-unstyled ms-3">
+                <li>🎯 Public relations & social media planning</li>
+                <li>🎯 Cross-marketing with other brands</li>
+                <li>🎯 Strong and growing brand identity</li>
+              </ul>
+            </div>
 
-  {/* Final CTA */}
-  <div className="text-center mt-5">
-    <h5 className="fw-bold"><FaUtensils className="me-2 text-danger" />Why Choose Hotel TFC?</h5>
-    <p className="text-muted">
-      Join a brand that blends heritage with modern hospitality. With our full-spectrum support, make your mark in India's food franchise revolution.
-    </p>
-  </div>
-</div>
+            {/* Final CTA */}
+            <div className="text-center mt-5">
+              <h5 className="fw-bold"><FaUtensils className="me-2 text-danger" />Why Choose Hotel TFC?</h5>
+              <p className="text-muted">
+                Join a brand that blends heritage with modern hospitality. With our full-spectrum support, make your mark in India's food franchise revolution.
+              </p>
+            </div>
+          </div>
 
         )}
       </div>

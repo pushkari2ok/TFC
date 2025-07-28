@@ -201,7 +201,9 @@ function Home() {
                     <div
                         className="header-bottom home2-header-bottom mb-5"
                         style={{
-                            padding: "5px 0",
+                            // padding: "-5px 0",
+                            height:"21vh",
+                            marginTop:"-30px",
                             backgroundColor: "#FFFAEC",
                         }}
                     >
@@ -481,121 +483,108 @@ function Home() {
 
 
                 {/* Our Specilities */}
-                <section id="specialities" className="banner-gallery banner-gallery2 overflow-hidden py-5 position-relative m-0 p-0">
-                    <div className="text-center py-4">
-                        <h1 data-aos="fade-up">Our Specialities</h1>
-                        <span data-aos="fade-up" data-aos-delay="100">Crafting Flavors, Preserving Culture.</span>
-                    </div>
 
+                <section className="banner-gallery banner-gallery2 overflow-hidden padding-top-120 padding-bottom-60">
+                    <h1 className="text-center mb-5" data-aos="zoom-in">Our Specilities</h1>
                     <div className="container position-relative">
-
-                        {/* ✅ Floating Shapes with Responsive Positions */}
+                        {/* Decorative Shapes */}
                         <div className="del-shapes">
-                            {/* Left Floating Shape */}
-                            <span
-                                className="ds-1 item-animateTwo floating d-none d-md-block"
-                                style={{
-                                    position: "absolute",
-                                    top: "10%",
-                                    left: "-30px",
-                                    zIndex: 0
-                                }}
-                                data-aos="fade-down"
-                            >
-                                <img
-                                    src="src/assets/img/icons/9.png"
-                                    alt="Floating Shape Left"
-                                    className="img-fluid"
-                                    style={{ width: "150px", height: "100px", marginLeft: "-40px" }}
-                                />
+                            <span className="ds-1 item-bounce">
+                                <img src="assets/images/shapes/26.png" alt="shape-1" />
                             </span>
-
-                            {/* Right Rotating Shape */}
-                            <span
-                                className="ds-2 rotating item-animateTwo d-none d-md-block"
-                                style={{
-                                    position: "absolute",
-                                    bottom: "5%",
-                                    right: "-30px",
-                                    zIndex: 0
-                                }}
-                                data-aos="fade-up"
-                            >
-                                <img
-                                    src="src/assets/img/icons/20.png"
-                                    alt="Floating Shape Right"
-                                    className="img-fluid "
-                                    style={{ width: "200px", height: "100px", marginRight: "-40px" }}
-                                />
+                            <span className="ds-2 item-bounce">
+                                <img src="assets/images/shapes/28.png" alt="shape-2" />
                             </span>
                         </div>
 
-                        {/* ===== Content Grid ===== */}
-                        <div className="row g-4">
-                            <div className="col-lg-6 col-md-12" data-aos="fade-right">
-                                <div className="gallery-img-1 text-center text-lg-start">
+                        {/* First Row */}
+                        <div className="row">
+                            <div className="col-lg-6 col-md-12" >
+                                <div className="gallery-img-1" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (1).jpeg" }} >
                                     <h3>Authenticity Over Trends</h3>
                                     <p>Sale off 50% only this week</p>
-                                    <a href="shopping-cart.html" className="btn btn-primary">Order Now</a>
-                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (1).jpeg" alt="" className="img-fluid mt-3" />
+                                    <a href="shopping-cart.html" className="btn">Order Now</a>
+                                    {/* <img className="pos1" src="assets/images/shapes/bbr.png" alt="Buzzed Burger" /> */}
                                 </div>
                             </div>
 
-                           
+                            <div className="col-lg-3 col-md-6">
+                                <div className="gallery-img-3" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM (2).jpeg" }}>
+                                    <h5>
+                                        Home-Made<br />
+                                        Masalas
 
-                            <div className="col-lg-3 col-md-6" data-aos="zoom-in" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM.jpeg" }}>
-                                <div className="gallery text-center">
-                                    <h5>Home<br />-Made<br />Masalas</h5>
-                                    {/* <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM (2).jpeg" alt="" className="img-fluid mb-2" />
-                                    <img src="assets/images/shapes/41.png" alt="" className="img-fluid s1" /> */}
-                                    <span className="gprice-2">$15</span><br />
-                                    <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
+                                    </h5>
+                                    <a href="shopping-cart.html">Order Now</a>
+                                    {/* <img className="img-pos" src="assets/images/gallery/grid1.png" alt="Burger Grid 1" />
+                                    <img src="assets/images/shapes/41.png" alt="Shape 41" className="s1" /> */}
+                                    <span className="gprice-2">$15</span>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6" data-aos="zoom-in-up" >
-                                <div className="gallery-img-2 text-center"style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/cooking2.jpg"}}>
-                                    {/* <img src="src/assets/img/WhatsAppimg/cooking2.jpg" alt="" className="img-fluid mb-2" /> */}
+                            <div className="col-lg-3 col-md-6">
+                                <div className="gallery-img-2 d-flex justify-content-end" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM (1).jpeg" }}>
+                                    <img className="img-pos1" src="assets/images/gallery/grid2.png" alt="Burger Grid 2" />
                                     <span className="gprice-1">$15</span>
                                     <div className="gimg-content">
-                                        <h5>Home-Made<br />Masalas</h5>
-                                        <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
+                                        <h5 className="margin-bottom-20">
+                                            Home-Made<br />
+                                            Masalas
+                                        </h5>
+                                        <a href="shopping-cart.html">Order Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Bottom Row */}
-                        <div className="row g-4 mt-4">
-                            <div className="col-lg-3 col-md-6" data-aos="fade-up-right" style={{ backgroundImage:"url('src/assets/img/WhatsAppimg/cooking.jpg"}}>
-                                <div className="gallery text-center">
-                                    <h5>Hearty <br />Vegetarian<br />Staples</h5>
-                                    {/* <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid mb-2" /> */}
-                                    {/* <img src="src/assets/img/WhatsAppimg/cooking.jpg" alt="" className="img-fluid s1" /> */}
-                                    <span className="gprice-2">$15</span><br />
-                                    <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
+
+
+
+
+                        {/* Second Row */}
+                        <div className="row margin-top-30">
+                            <div className="col-lg-3 col-md-6">
+                                <div className="gallery-img-3 gallery-img-33" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.06 PM.jpeg" }}>
+                                    <h5>
+                                        Hearty<br />
+                                        Vegetaria<br />
+                                        n Staples
+                                    </h5>
+                                    <a href="shopping-cart.html">Order Now</a>
+                                    {/* <img src="assets/images/gallery/grid4.png" alt="Burger Grid 4" className="img-pos" />
+                                    <img src="assets/images/shapes/41.png" alt="Shape 41" className="s1" /> */}
+                                    <span className="gprice-2">$15</span>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6" data-aos="fade-up">
-                                <div className="gallery-img-22 text-center">
-                                    {/* <img src="assets/images/gallery/grid5.png" alt="" className="img-fluid mb-2" /> */}
+                            <div className="col-lg-3 col-md-6">
+                                <div className="gallery-img-22 d-flex justify-content-end" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/cooking.jpg" }}>
+                                    <img className="img-pos" src="assets/images/gallery/grid5.png" alt="Burger Grid 5" />
                                     <span className="gprice-1">$15</span>
                                     <div className="gimg-content">
-                                        <h5>Beloved <br /> Punjabi<br /> Favourites</h5>
-                                        <img src="assets/images/shapes/42.png" alt="" className="img-fluid s1" />
-                                        <a href="shopping-cart.html" className="btn btn-outline-dark btn-sm mt-2">Order Now</a>
+                                        <h5 className="margin-bottom-20">
+                                            Beloved<br />
+                                            Punjabi<br />
+                                            Favourites
+                                        </h5>
+                                        {/* <img src="assets/images/shapes/42.png" alt="Shape 42" className="s1" /> */}
+                                        <a href="shopping-cart.html">Order Now</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                <div className="gallery-img-1 text-center text-lg-start">
-                                    <h5>Rich Maharashtrian <br />Non-Veg Specials</h5>
+                            <div className="col-lg-6 col-md-12">
+                                <div className="gallery-img-1 gallery-img-11 gallery-img-01" style={{ backgroundImage: "url('src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" }}>
+                                    <h5 className="margin-bottom-10">
+                                        Rich<br />
+                                        Maharashtrian <br />
+                                        Non-Veg <br />
+                                        Specials
+                                    </h5>
                                     <p>Sale off 50% only this week</p>
-                                    <a href="shopping-cart.html" className="btn btn-primary">Order Now</a><br />
-                                    <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid mt-3" />
-                                    {/* <img src="src/assets/img/WhatsAppimg/WhatsApp Image 2025-07-22 at 9.05.07 PM.jpeg" alt="" className="img-fluid pbadge mt-2" /> */}
+                                    <a href="shopping-cart.html" className="btn">Order Now</a>
+                                    {/* <img className="gs1" src="assets/images/shapes/bbs.png" alt="Chicken Combo" />
+                                    <img className="pbadge" src="assets/images/icons/pbadge.png" alt="Badge" /> */}
                                 </div>
                             </div>
                         </div>
@@ -609,10 +598,12 @@ function Home() {
 
 
 
+
                 {/*Who Are We */}
-                <section className="softdrink-section padding-bottom-80  position-relativecm-0 p-0 overflow-hidden w-100" id="about-us">
+                <section className="softdrink-section padding-bottom-80 position-relative overflow-hidden w-100" id="about-us">
                     {/* 🍃 Decorative Floating Leaves */}
-                    <div className="item-animateTwo"
+                    <div
+                        className="item-animateTwo"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -641,14 +632,14 @@ function Home() {
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "30vh",
+                                width: "15vh",
                                 height: "auto",
                                 top: "40%",
                                 right: "5%",
                                 opacity: 0.8,
                                 animation: "float2 6s ease-in-out infinite",
                                 animationDelay: "1.5s",
-                                zIndex: 1000, // <-- Added here
+                                zIndex: 1000,
                             }}
                         />
                         <img
@@ -656,7 +647,7 @@ function Home() {
                             alt="leaf"
                             style={{
                                 position: "absolute",
-                                width: "30vh",
+                                width: "12vh",
                                 height: "auto",
                                 top: "65%",
                                 left: "20%",
@@ -668,47 +659,50 @@ function Home() {
                     </div>
 
                     <div className="container">
-                        <h1 className="text-center mb-5" data-aos="fade-up">Who Are We</h1>
-                        <div className="row pb-5">
-
+                        <h1 className="text-center mb-5" data-aos="fade-up">
+                            Who Are We
+                        </h1>
+                        <div className="row pb-5 d-flex align-items-center">
                             {/* Left Content */}
-                            <div className="col-lg-6" data-aos="fade-right">
-                                <div className="softdrink-right">
+                            <div className="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
+                                <div className="softdrink-right pe-lg-5">
                                     <p>
-                                        Hotel TFC stands as a beacon of traditional
-                                        Indian culinary arts in the heart of Indapur.
-                                        We are a warm and welcoming restaurant
-                                        specializing in authentic Maharashtrian and
-                                        Punjabi non-vegetarian and vegetarian
-                                        dishes. Our mission is to present the true
-                                        essence of these rich culinary traditions,
-                                        focusing on the bold, rustic flavors of
-                                        Maharashtra and the beloved, comforting
-                                        tastes of Punjab. We believe that food is not
-                                        just sustenance, but an experience, a
-                                        memory, and a connection to our roots.
+                                        Hotel TFC brings the rich flavors of Maharashtra and Punjab to the heart of Indapur. We serve authentic vegetarian and non-vegetarian dishes in a warm, welcoming setting. At TFC, food is more than a meal — it's an experience rooted in tradition.
                                     </p>
                                     <h2>
                                         The Heartbeat of Indapur's <span>Heritage Cuisine</span>
                                     </h2>
-                                    <div className="quote-box d-flex" data-aos="zoom-in">
-                                        <span className="qq"><i className="fas fa-quote-right"></i></span>
-                                        <div className="qoute-img">
-                                            <img src="src/assets/img/icons/11.png" className="item-animateTwo" alt="" />
+                                    <div className="quote-box d-flex align-items-center flex-wrap" data-aos="zoom-in">
+                                        <span className="qq me-2">
+                                            <i className="fas fa-quote-right"></i>
+                                        </span>
+                                        <div className="qoute-img me-3">
+                                            <img
+                                                src="src/assets/img/icons/11.png"
+                                                className="item-animateTwo"
+                                                alt="decorative"
+                                                style={{ width: "50px" }}
+                                            />
                                         </div>
                                         <div className="quote-content">
                                             <h5>The Heartbeat of Indapur's Heritage Cuisine.</h5>
                                             <p>Washington Irving</p>
                                         </div>
                                     </div>
-                                    <a href="shopping-cart.html" className="btn2" data-aos="fade-up">shop now</a>
+                                    <a href="shopping-cart.html" className="btn2 mt-3" data-aos="fade-up">
+                                        Shop Now
+                                    </a>
                                 </div>
                             </div>
 
                             {/* Right Image Grid */}
-                            <div className="col-lg-6" data-aos="fade-left" >
-                                <img src="src/assets/img/OurSpecialitiesimg/who are we_ (1).png" alt="" style={{ marginLeft: "90px" }} />
-
+                            <div className="col-lg-6 col-md-12 text-center" data-aos="fade-left">
+                                <img
+                                    src="src/assets/img/OurSpecialitiesimg/who are we_ (1).png"
+                                    alt="Who Are We"
+                                    className="img-fluid"
+                                    style={{ maxWidth: "100%", height: "auto" }}
+                                />
                             </div>
                         </div>
 
@@ -718,14 +712,14 @@ function Home() {
                                 <img
                                     src="src/assets/img/icons/8.png"
                                     alt="Decorative Left"
-                                    style={{ width: "80px", height: "80px" }}
+                                    style={{ width: "60px", height: "60px" }}
                                 />
                             </span>
-                            <span className="position-absolute  rotating" style={{ bottom: "10%", right: "30px" }}>
+                            <span className="position-absolute rotating" style={{ bottom: "10%", right: "30px" }}>
                                 <img
                                     src="src/assets/img/icons/10.png"
                                     alt="Decorative Right"
-                                    style={{ width: "100px", height: "100px" }}
+                                    style={{ width: "80px", height: "80px" }}
                                 />
                             </span>
                         </div>
@@ -736,39 +730,39 @@ function Home() {
 
 
 
+
                 {/*Why Tfc section */}
                 <section className="drink-ind py-5 m-0 p-0 overflow-hidden">
-                    <div className="container-fluid p-0 m-0">
-                        <h1 className="text-center mb-4" data-aos="zoom-in">Why TFC?</h1>
+                    <div className="container-fluid px-3">
+                        <h1 className="text-center mb-4" data-aos="zoom-in">
+                            Why TFC?
+                        </h1>
 
-                        <div className="row align-items-center gy-5">
-
+                        <div className="row align-items-center gy-5" >
                             {/* Left Image with Decorative Shapes */}
-
-
-                            <div className="col-lg-6 col-md-12 p-0 position-relative " data-aos="fade-right">
+                            <div
+                                className="col-lg-6 col-md-12 p-0 d-flex justify-content-center position-relative"
+                                data-aos="fade-right"
+                            >
                                 <div className="drink-ind-left text-center">
                                     <img
                                         src="src/assets/img/OurSpecialitiesimg/why tfc_ (1).png"
                                         alt="Why TFC"
-                                        className="img-fluid w-100 "
-                                        style={{ maxWidth: "90%", height: "100%" }}
+                                        className="img-fluid"
+                                        style={{ maxWidth: "100%", height: "auto" }}
                                     />
 
                                     {/* Decorative Floating and Rotating Shapes */}
                                     <div className="position-absolute item-animateTwo top-0 start-0 w-100 h-100">
-                                        {/* <span className="position-absolute floating d-none d-md-block" style={{ top: "10%", left: "-40px" }} data-aos="fade-in">
-                                            <img
-                                                src="src/assets/img/icons/18.png"
-                                                alt="Floating Shape"
-                                                style={{ width: "80px", height: "80px" }}
-                                            />
-                                        </span> */}
-                                        <span className="position-absolute rotating d-none d-md-block" style={{ bottom: "10%", right: "-30px" }} data-aos="fade-in">
+                                        <span
+                                            className="position-absolute rotating d-none d-md-block"
+                                            style={{ bottom: "10%", right: "-30px" }}
+                                            data-aos="fade-in"
+                                        >
                                             <img
                                                 src="src/assets/img/icons/17.png"
                                                 alt="Rotating Shape"
-                                                style={{ width: "100px", height: "100px" }}
+                                                style={{ width: "80px", height: "80px" }}
                                             />
                                         </span>
                                     </div>
@@ -777,27 +771,25 @@ function Home() {
 
                             {/* Right Content */}
                             <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                <div className="drink-ind-right">
+                                <div className="drink-ind-right px-3 px-md-4">
                                     <div className="common-title-area3 text-center text-lg-start mb-4">
                                         <h2>
                                             Authenticity Guaranteed:
-
                                             <br />
-                                            Real regional flavors, <span> no gimmicks.</span>
+                                            Real regional flavors, <span>no gimmicks.</span>
                                         </h2>
                                     </div>
 
                                     <div className="row g-4">
                                         {/* Feature 1 */}
-                                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                                        <div
+                                            className="col-12 col-sm-6"
+                                            data-aos="fade-up"
+                                            data-aos-delay="200"
+                                        >
                                             <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
                                                 <div className="fea-img mb-3 mb-sm-0 me-sm-3">
-                                                    {/* <img
-                                        src="assets/images/img/htshape3.png"
-                                        alt="Quality Hops"
-                                        className="img-fluid"
-                                        style={{ maxWidth: "80px" }}
-                                    /> */}
+                                                    {/* Optional icon or shape */}
                                                 </div>
                                                 <div className="fea-content">
                                                     <h5>Quality Hops</h5>
@@ -807,7 +799,11 @@ function Home() {
                                         </div>
 
                                         {/* Feature 2 */}
-                                        <div className="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                                        <div
+                                            className="col-12 col-sm-6"
+                                            data-aos="fade-up"
+                                            data-aos-delay="300"
+                                        >
                                             <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
                                                 <div className="fea-img mb-3 mb-sm-0 me-sm-3">
                                                     <img
@@ -829,6 +825,8 @@ function Home() {
                         </div>
                     </div>
                 </section>
+
+
 
 
 
@@ -889,7 +887,7 @@ function Home() {
                                     <img
                                         src="src/assets/img/OurSpecialitiesimg/home made masal_ (1).png"
                                         alt="Food Brand Visual"
-                                        className="img-fluid"
+                                        className="img-fluid" data-aos="fade-right"
                                         style={{
                                             maxWidth: "100%",
                                             height: "auto",
@@ -934,108 +932,156 @@ function Home() {
 
 
                 {/* Drink Section */}
-                <div className="container-fluid">
-                    <section
-                        className="drink-ind py-5 overflow-hidden position-relative"
-                        data-aos="fade-up"
-                        style={{
-                            backgroundImage: 'url("src/assets/img/icons/who are we_.png")',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            padding: "40px",
-                            height: "80vh",
-                        }}
-                    >
-                        <div className="container">
-                            <div className="row align-items-center gy-5">
+                <section className="drink-ind padding-bottom-90 mt-5 position-relative">
+                    <div className="container mt-5">
+                        <div className="row align-items-center">
+                            {/* Left Image Section */}
+                            <div className="col-lg-6 wow fadeInLeft" style={{ position: "relative" }} data-aos="fade-right">
+                                <div className="drink-ind-left margin-bottom-30" style={{ position: "relative" }}>
+                                    {/* Rotating background circle image */}
+                                    <img
+                                        className="drs1 item-bounce"
+                                        src="src/assets/img/Whoweimg/design .png"
+                                        alt="htshape20"
+                                        style={{
+                                            position: "absolute",
+                                            top: "15%",
+                                            left: "42%",
+                                            transform: "translate(-50%, -50%)",
+                                            zIndex: 0,
+                                            width: "100%",
+                                            maxWidth: "900px",
+                                            animation: "rotate360 20s linear infinite",
+                                        }}
+                                    />
 
-                                {/* Left Decorative Area - Now no background here */}
-                                <div
-                                    className="col-lg-6 col-md-12 item-animateTwo position-relative"
-                                    data-aos="fade-right"
-                                >
-                                    {/* Decorative Shapes */}
-                                    <div className="position-absolute item-animateTwo top-0 start-0 w-100 h-100">
-                                        <span
-                                            className="position-absolute floating d-none d-sm-block"
-                                            style={{ top: '15%', left: '-40px' }}
-                                            data-aos="zoom-in"
-                                        >
-                                            <img
-                                                src="src/assets/img/icons/20.png"
-                                                alt="Decor Shape 1"
-                                                style={{ width: '60px', height: '60px' }}
-                                            />
-                                        </span>
-                                        <span
-                                            className="position-absolute rotating d-none d-sm-block"
-                                            style={{ bottom: '10px', right: '-30px' }}
-                                            data-aos="fade-up"
-                                        >
-                                            <img
-                                                src="src/assets/img/icons/22.png"
-                                                alt="Decor Shape 2"
-                                                style={{ width: '80px', height: '90px', padding: "4px" }}
-                                            />
-                                        </span>
-                                    </div>
+                                    {/* Plate Image */}
+                                    <img
+                                        className="plate-img"
+                                        src="src/assets/img/Whoweimg/plate.png"
+                                        alt="Plate"
+                                        style={{
+                                            position: "absolute",
+                                            zIndex: 2,
+                                            width: "100%",
+                                            maxWidth: "500px",
+                                        }}
+                                    />
+
+                                    {/* Additional Decorative Images */}
+                                    <img
+                                        className="drs2 item-bounce"
+                                        src="assets/images/img/htshape21.png"
+                                        alt="htshape21"
+                                        style={{
+                                            position: "relative",
+                                            zIndex: 3,
+                                            maxWidth: "100%",
+                                            width: "80px",
+                                        }}
+                                    />
+                                    <img
+                                        className="drs4 item-animateTwo"
+                                        src="assets/images/img/htshape2.png"
+                                        alt="htshape2"
+                                        style={{
+                                            position: "relative",
+                                            zIndex: 3,
+                                            maxWidth: "100%",
+                                            width: "80px",
+                                        }}
+                                    />
                                 </div>
+                            </div>
 
-                                {/* Right Content */}
-                                <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                    <div className="drink-ind-right text-center text-md-start">
-                                        <div className="common-title-area3 mb-4">
-                                            <h2 data-aos="zoom-in" data-aos-delay="100" className="fs-3">
-                                                Unmatched Heritage:<br />
-                                                Recipes passed down <span>through generations.</span>
-                                            </h2>
-                                        </div>
-
-                                        <div className="row g-4">
-                                            {/* Feature 1 */}
-                                            <div className="col-sm-6 col-12" data-aos="fade-up" data-aos-delay="200">
-                                                <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
-                                                    <div className="fea-img mb-3 mb-sm-0 me-sm-3">
-                                                        <img
-                                                            src="assets/images/img/htshape3.png"
-                                                            alt="Quality Hops"
-                                                            className="img-fluid"
-                                                            style={{ maxWidth: '60px' }}
-                                                        />
+                            {/* Right Content Section */}
+                            <div className="col-lg-6 wow fadeInRight" data-aos="fade-left">
+                                <div className="drink-ind-right">
+                                    <div className="common-title-area3 text-center text-md-start">
+                                        <h2>
+                                            Unmatched Heritage:
+                                            <span> Recipes passed down through generations.</span>
+                                        </h2>
+                                    </div>
+                                    <div className="inner-fea">
+                                        <div className="row margin-top-30">
+                                            <div className="col-lg-6 col-md-6">
+                                                <div className="single-fea">
+                                                    <div className="fea-img">
+                                                        <img src="assets/images/img/htshape3.png" alt="htshape3" style={{ maxWidth: "100%" }} />
                                                     </div>
-                                                    <div className="fea-content">
-                                                        <h5 className="fs-6 fw-bold">Quality Hops</h5>
-                                                        <p className="mb-0 small">Lorem ipsum dolor sit amet consectetur.</p>
+                                                    <div className="fea-content text-center text-md-start">
+                                                        <h5>Quality Hops</h5>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            {/* Feature 2 */}
-                                            <div className="col-sm-6 col-12" data-aos="fade-up" data-aos-delay="300">
-                                                <div className="single-fea d-flex flex-column flex-sm-row align-items-center text-center text-sm-start">
-                                                    <div className="fea-img mb-3 mb-sm-0 me-sm-3">
-                                                        <img
-                                                            src="assets/images/img/htshape4.png"
-                                                            alt="Premium Malts"
-                                                            className="img-fluid"
-                                                            style={{ maxWidth: '60px' }}
-                                                        />
+                                            <div className="col-lg-6 col-md-6">
+                                                <div className="single-fea">
+                                                    <div className="fea-img">
+                                                        <img src="assets/images/img/htshape4.png" alt="htshape4" style={{ maxWidth: "100%" }} />
                                                     </div>
-                                                    <div className="fea-content">
-                                                        <h5 className="fs-6 fw-bold">Premium Malts</h5>
-                                                        <p className="mb-0 small">Lorem ipsum dolor sit amet consectetur.</p>
+                                                    <div className="fea-content text-center text-md-start">
+                                                        <h5>Premium Malts</h5>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+
+                    {/* Right Positioned Image -100px from container */}
+                    <div
+                        style={{
+                            position: "absolute",
+                            right: "-100px",
+                            top: "90%",
+                            transform: "translateY(-50%)",
+                            width: "450px",
+                            height: "170px", // Adjust this to show only part of the image
+                            overflow: "hidden",
+                            zIndex: 1,
+                        }}
+                        className="extra-right-img-wrapper"
+                    >
+                        <img
+                            src="src/assets/img/Whoweimg/design .png"
+                            alt="Extra Decoration"
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+
+                    {/* Rotation Keyframe Style */}
+                    <style>
+                        {`
+            @keyframes rotate360 {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+
+            @media (max-width: 992px) {
+                .extra-right-img {
+                    display: none; /* Hide on smaller screens */
+                }
+            }
+        `}
+                    </style>
+                </section>
+
+
 
 
 
@@ -1439,23 +1485,8 @@ function Home() {
                             <div className="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right">
                                 <div className="softdrink-right">
                                     <p>
-                                        Hotel TFC was born from a deep-seated passion for authentic Indian
-                                        cuisine, particularly the rustic and soul-satisfying non-vegetarian dishes of
-                                        Maharashtra. Growing up, I always admired how other regional cuisines,
-                                        like Punjabi food, gained national fame. Yet, I felt that Maharashtrian
-                                        mutton dishes, with their incredible depth of flavor, didn't receive the
-                                        widespread recognition they truly deserved.
-                                        My childhood kitchen was a classroom of love, patience, and tradition. It
-                                        taught me the magic of simple, home-style cooking – how homemade
-                                        masalas, slow-cooking, and cherished family recipes create an
-                                        unparalleled taste that ready-made packets simply cannot replicate.
-                                        This profound appreciation for culinary heritage inspired me to create
-                                        Hotel TFC. It's more than just a restaurant; it's a heartfelt tribute to our
-                                        culture, a place where generations of culinary wisdom come alive on your
-                                        plate. We envision Hotel TFC as a gathering spot where people can enjoy
-                                        hearty meals, connect through shared flavors, and celebrate tradition. It's
-                                        not just food; it's our identity.
-                                        From Passion to Plate: Our Culinary Journey.
+                                        Hotel TFC was born from a deep love for authentic Indian cuisine — especially the bold, soulful flavors of Maharashtrian non-veg dishes. While Punjabi food gained national fame, I felt our rich mutton recipes remained unsung.
+                                        Inspired by childhood memories of home-cooked meals, slow-cooked masalas, and family traditions, TFC is my tribute to that culinary heritage. More than just a restaurant, it’s a place where culture meets flavor — where every dish tells a story and brings people together.
                                     </p>
 
                                     <h2 className="my-4">
@@ -1482,7 +1513,7 @@ function Home() {
 
                             {/* Right Images */}
                             <div className="col-lg-6 col-md-12" data-aos="fade-left">
-                                <img src="src/assets/img/OurSpecialitiesimg/our story .png" alt="" style={{height:"100vh",width:"110vh"}}/>
+                                <img src="src/assets/img/OurSpecialitiesimg/our story .png" alt="" style={{ height: "100vh", width: "110vh" }} />
                                 {/* <div className="row g-3">
                                     {[
                                         "htimg3.png",
@@ -1505,50 +1536,52 @@ function Home() {
                 </section>
 
                 {/* Our Ambience */}
-                <section className="banner-gallery banner-gallery2 overflow-hidden padding-top-120 padding-bottom-60 m-0 p-0" id="ambience">
+                <section className="banner-gallery banner-gallery2 overflow-hidden padding-top-120 padding-bottom-60">
+                    <h1 className="text-center mb-5" data-aos="zoom-in">Our Ambience </h1>
                     <div className="container position-relative">
-                        <h1 className="text-center mb-5" data-aos="zoom-in">Our Ambience</h1>
-
                         {/* Decorative Shapes */}
                         <div className="del-shapes">
                             <span className="ds-1 item-bounce">
-                                <img src="src/assets/img/icons/24.png" alt="shape" style={{ marginTop: "-60px", width: "20vh", marginLeft: "-10px" }} />
+                                <img src="assets/images/shapes/26.png" alt="Shape 26" />
                             </span>
                             <span className="ds-2 item-bounce">
-                                <img src="src/assets/img/icons/21.png" alt="shape" style={{ marginTop: "60px", width: "40vh" }} />
+                                <img src="assets/images/shapes/28.png" alt="Shape 28" />
                             </span>
                         </div>
 
                         {/* First Row */}
                         <div className="row">
-                            <div className="col-lg-6 col-md-12 mb-4" data-aos="fade-right">
-                                <div className="gallery-img-1 text-center text-lg-start">
+                            <div className="col-lg-6 col-md-12 mb-4" data-aos="fade-up">
+                                <div className="gallery-img-1" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 5.jpg" }}>
                                     <h3>Buzzed Burger</h3>
                                     <p>Sale off 50% only this week</p>
-                                    <a href="shopping-cart.html" className="btn btn-danger mt-2">Order Now</a>
-                                    <img className="pos1 img-fluid" src="assets/images/shapes/bbr.png" alt="Buzzed Burger" />
+                                    <a href="shopping-cart.html" className="btn">Order Now</a>
+                                    {/* <img className="pos1" src="assets/images/shapes/bbr.png" alt="Buzzed Burger" /> */}
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
-                                <div className="gallery-img-3 text-center">
+                            <div className="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+                                <div className="gallery-img-3" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 2.jpg" }}>
                                     <h5>
-                                        Super<br />Delicious<br />Burger
+                                        Super<br />
+                                        Delicious<br />
+                                        Burger
                                     </h5>
-                                    <a href="shopping-cart.html" className="d-block mt-2">Order Now</a>
-                                    <img className="img-pos img-fluid" src="assets/images/gallery/grid1.png" alt="Burger 1" />
-                                    <img src="assets/images/shapes/41.png" alt="shape" className="s1 img-fluid" />
+                                    <a href="shopping-cart.html">Order Now</a>
+                                    {/* <img className="img-pos" src="assets/images/gallery/grid1.png" alt="Burger Grid 1" />
+                                    <img src="assets/images/shapes/41.png" alt="Shape 41" className="s1" /> */}
                                     <span className="gprice-2">$15</span>
                                 </div>
                             </div>
 
                             <div className="col-lg-3 col-md-6 mb-4" data-aos="fade-left">
-                                <div className="gallery-img-2 d-flex justify-content-end align-items-center">
-                                    <img className="img-pos1 img-fluid" src="assets/images/gallery/grid2.png" alt="Burger 2" />
+                                <div className="gallery-img-2 d-flex justify-content-end" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 3 .jpg')" }}>
+                                    <img className="img-pos1" src="assets/images/gallery/grid2.png" alt="Burger Grid 2" />
                                     <span className="gprice-1">$15</span>
-                                    <div className="gimg-content text-end ms-2">
+                                    <div className="gimg-content">
                                         <h5 className="margin-bottom-20">
-                                            Delicious<br />Burger
+                                            Delicious<br />
+                                            Burger
                                         </h5>
                                         <a href="shopping-cart.html">Order Now</a>
                                     </div>
@@ -1557,47 +1590,53 @@ function Home() {
                         </div>
 
                         {/* Second Row */}
-                        <div className="row margin-top-30">
-                            <div className="col-lg-3 col-md-6 mb-4" data-aos="zoom-in-up">
-                                <div className="gallery-img-3 gallery-img-33 text-center">
+                        <div className="row margin-top-30" >
+                            <div className="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                                <div className="gallery-img-3 gallery-img-33" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 7.jpg')" }}>
                                     <h5>
-                                        Super<br />Combo<br />Burger
+                                        Super<br />
+                                        Combo<br />
+                                        Burger
                                     </h5>
-                                    <a href="shopping-cart.html" className="d-block mt-2">Order Now</a>
-                                    <img src="assets/images/gallery/grid4.png" alt="Burger 4" className="img-pos img-fluid" />
-                                    <img src="assets/images/shapes/41.png" alt="shape" className="s1 img-fluid" />
+                                    <a href="shopping-cart.html">Order Now</a>
+                                    <img src="assets/images/gallery/grid4.png" alt="Burger Grid 4" className="img-pos" />
+                                    <img src="assets/images/shapes/41.png" alt="Shape 41" className="s1" />
                                     <span className="gprice-2">$15</span>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
-                                <div className="gallery-img-22 d-flex justify-content-end align-items-center">
-                                    <img className="img-pos img-fluid" src="assets/images/gallery/grid5.png" alt="Burger 5" />
+                            <div className="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                                <div className="gallery-img-22 d-flex justify-content-end" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 1.jpg')" }}>
+                                    <img className="img-pos" src="assets/images/gallery/grid5.png" alt="Burger Grid 5" />
                                     <span className="gprice-1">$15</span>
-                                    <div className="gimg-content text-end ms-2">
+                                    <div className="gimg-content">
                                         <h5 className="margin-bottom-20">
-                                            Super<br />Delicious<br />Burger
+                                            Super<br />
+                                            Delicious<br />
+                                            Burger
                                         </h5>
-                                        <img src="assets/images/shapes/42.png" alt="shape" className="s1 img-fluid" />
-                                        <a href="shopping-cart.html" className="d-block mt-1">Order Now</a>
+                                        <a href="shopping-cart.html">Order Now</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="col-lg-6 col-md-12 mb-4" data-aos="fade-up">
-                                <div className="gallery-img-1 gallery-img-11 gallery-img-01 text-center text-lg-start">
+                            <div className="col-lg-6 col-md-12 mb-4" data-aos="zoom-in">
+                                <div className="gallery-img-1 gallery-img-11 gallery-img-01" style={{ backgroundImage: "url('src/assets/img/OurSpecialitiesimg/ambience 9.jpg')" }}>
                                     <h5 className="margin-bottom-10">
-                                        Chicken<br />Combo<br />Burger
+                                        Chicken<br />
+                                        Combo<br />
+                                        Burger
                                     </h5>
                                     <p>Sale off 50% only this week</p>
-                                    <a href="shopping-cart.html" className="btn btn-danger mt-2">Order Now</a>
-                                    <img className="gs1 img-fluid" src="assets/images/shapes/bbs.png" alt="Chicken Combo" />
-                                    <img className="pbadge img-fluid" src="assets/images/icons/pbadge.png" alt="Badge" />
+                                    <a href="shopping-cart.html" className="btn">Order Now</a>
+                                    {/* <img className="gs1" src="assets/images/shapes/bbs.png" alt="Chicken Combo" />
+                                    <img className="pbadge" src="assets/images/icons/pbadge.png" alt="Badge" /> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
 
                 <Contact />
 

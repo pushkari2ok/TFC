@@ -57,7 +57,7 @@ const FranchiseForm = () => {
       <h1 className="text-center ">Franchise Opportunity</h1>
       <div className="franchise-container">
         <div className="franchise-left" data-aos="fade-right">
-          <img src="src/assets/img/Homeimg/tfc.webp" alt="Franchise" className="outlet-img"  />
+          <img src="src/assets/img/Whoweimg/tfc hotel.png" alt="Franchise" className="outlet-img"  />
         </div>
 
         <div className="franchise-right" data-aos="fade-left">
