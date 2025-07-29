@@ -33,9 +33,7 @@ import FoodBrand from "./FoodBrand";
 import Drink from "./Drink";
 
 // import "./ScrollDishes.css"; // optional
-// import Dishes from "./Dishes"; // optional
-
-
+// import Dishes from "./Dishes"; // optiona
 
 
 function Home() {
